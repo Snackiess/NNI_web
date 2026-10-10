@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NNI - New News Indonesia. Berita terbaru, terpercaya, dan terkini dari seluruh Indonesia.">
+    <meta name="theme-color" content="#d71920">
+    <title>NNI - New News Indonesia | Berita Terbaru Hari Ini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a class="skip" href="#konten">Lewati ke konten</a>
+
+    <!-- Preloader -->
+    <div id="preloader" aria-live="polite">
+        <div class="pre-logo"><span>NNI</span></div>
+        <div class="loader"></div>
+        <h2>Memuat berita...</h2>
+        <p>Sedang mengambil berita terbaru</p>
+    </div>
+
+    <!-- Top bar -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span id="tanggal"></span>
+            <div class="topbar-right">
+                <span class="live"><i></i> Live Update</span>
+                <button id="tema" class="icon-btn" aria-label="Ganti tema">🌓</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="./" class="logo" aria-label="NNI - New News Indonesia">
+                <span class="logo-mark">NNI</span>
+                <span class="logo-text">
+                    <strong>New News Indonesia</strong>
+                    <small>Cepat. Akurat. Terpercaya.</small>
+                </span>
+            </a>
+            <form class="search" id="formCari" role="search">
+                <input type="search" id="cari" placeholder="Cari berita..." aria-label="Cari berita" autocomplete="off">
+                <button type="submit" aria-label="Cari">🔍</button>
+            </form>
+        </div>
+        <nav class="nav" aria-label="Kategori berita">
+            <div class="container">
+                <ul id="kategori"></ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Ticker -->
+    <div class="ticker" id="ticker" hidden>
+        <div class="container ticker-inner">
+            <span class="ticker-label">TERKINI</span>
+            <div class="ticker-window">
+                <div class="ticker-track" id="tickerTrack"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container main" id="konten">
+        <div id="status" class="status" hidden></div>
+
+        <section id="hero" class="hero" aria-label="Berita utama"></section>
+
+        <div class="layout">
+            <section aria-label="Daftar berita">
+                <div class="section-head">
+                    <h2 id="judulSeksi">Berita Terbaru</h2>
+                    <span id="jumlah" class="jumlah"></span>
+                </div>
+                <div id="berita" class="list"></div>
+                <div class="more-wrap">
+                    <button id="btnMore" class="btn btn-outline" hidden>Muat berita lainnya</button>
+                </div>
+            </section>
+
+            <aside class="sidebar" aria-label="Sidebar">
+                <div class="widget" id="widgetSorotan" hidden>
+                    <h3 class="widget-title">Sorotan Hari Ini</h3>
+                    <ol class="rank" id="sorotan"></ol>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget-title">Jelajahi Kategori</h3>
+                    <div class="chips" id="chips"></div>
+                </div>
+
+                <div class="widget promo">
+                    <strong>NNI</strong>
+                    <p>Ikuti perkembangan Indonesia dan dunia setiap hari. Berita dikurasi dari CNN Indonesia.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div>
+                <div class="logo logo-footer">
+                    <span class="logo-mark">NNI</span>
+                    <span class="logo-text"><strong>New News Indonesia</strong></span>
+                </div>
+                <p>Portal berita yang menyajikan informasi terkini dari Indonesia dan dunia.</p>
+            </div>
+            <p class="copy">&copy; <span id="tahun"></span> NNI - New News Indonesia. Hak cipta dilindungi. Sumber berita: CNN Indonesia.</p>
+        </div>
+    </footer>
+
+    <button id="toTop" class="to-top" aria-label="Kembali ke atas" hidden>↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
